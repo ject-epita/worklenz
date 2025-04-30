@@ -10,7 +10,7 @@ services:
       backend:
         condition: service_started
     env_file:
-      - ./worklenz-frontend/.env.production
+      - /root/worklenz/.env.frontend
     networks:
       - worklenz
 
@@ -25,7 +25,7 @@ services:
       minio:
         condition: service_started
     env_file:
-      - ./worklenz-backend/.env
+      - /root/worklenz/.env.backend
     networks:
       - worklenz
 
